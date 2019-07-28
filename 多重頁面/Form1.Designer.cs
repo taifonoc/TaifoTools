@@ -78,11 +78,16 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.TD_button = new System.Windows.Forms.Button();
             this.AutoOpen_button = new System.Windows.Forms.Button();
+            this.TD_button = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.TD_textbox = new System.Windows.Forms.TextBox();
+            this.TD_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.TD_secr = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -134,7 +139,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Location = new System.Drawing.Point(15, 70);
+            this.panel1.Location = new System.Drawing.Point(15, 67);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1214, 642);
             this.panel1.TabIndex = 1;
@@ -578,16 +583,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(741, 52);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // TD_button
-            // 
-            this.TD_button.Location = new System.Drawing.Point(3, 3);
-            this.TD_button.Name = "TD_button";
-            this.TD_button.Size = new System.Drawing.Size(359, 46);
-            this.TD_button.TabIndex = 0;
-            this.TD_button.Text = "台電計畫查詢";
-            this.TD_button.UseVisualStyleBackColor = true;
-            this.TD_button.Click += new System.EventHandler(this.TD_button_Click);
-            // 
             // AutoOpen_button
             // 
             this.AutoOpen_button.Location = new System.Drawing.Point(373, 3);
@@ -597,6 +592,16 @@
             this.AutoOpen_button.Text = "Profile產生器";
             this.AutoOpen_button.UseVisualStyleBackColor = true;
             this.AutoOpen_button.Click += new System.EventHandler(this.AutoOpen_button_Click);
+            // 
+            // TD_button
+            // 
+            this.TD_button.Location = new System.Drawing.Point(3, 3);
+            this.TD_button.Name = "TD_button";
+            this.TD_button.Size = new System.Drawing.Size(359, 46);
+            this.TD_button.TabIndex = 0;
+            this.TD_button.Text = "台電計畫查詢";
+            this.TD_button.UseVisualStyleBackColor = true;
+            this.TD_button.Click += new System.EventHandler(this.TD_button_Click);
             // 
             // label19
             // 
@@ -608,11 +613,48 @@
             this.label19.TabIndex = 6;
             this.label19.Text = "版本：Ver.1";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.TD_textbox);
+            this.panel2.Controls.Add(this.TD_richTextBox);
+            this.panel2.Controls.Add(this.TD_secr);
+            this.panel2.Location = new System.Drawing.Point(12, 70);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(735, 642);
+            this.panel2.TabIndex = 7;
+            // 
+            // TD_textbox
+            // 
+            this.TD_textbox.Location = new System.Drawing.Point(3, 16);
+            this.TD_textbox.Name = "TD_textbox";
+            this.TD_textbox.Size = new System.Drawing.Size(336, 22);
+            this.TD_textbox.TabIndex = 5;
+            // 
+            // TD_richTextBox
+            // 
+            this.TD_richTextBox.Location = new System.Drawing.Point(3, 53);
+            this.TD_richTextBox.Name = "TD_richTextBox";
+            this.TD_richTextBox.ReadOnly = true;
+            this.TD_richTextBox.Size = new System.Drawing.Size(729, 567);
+            this.TD_richTextBox.TabIndex = 4;
+            this.TD_richTextBox.Text = "";
+            // 
+            // TD_secr
+            // 
+            this.TD_secr.Location = new System.Drawing.Point(361, 16);
+            this.TD_secr.Name = "TD_secr";
+            this.TD_secr.Size = new System.Drawing.Size(75, 23);
+            this.TD_secr.TabIndex = 3;
+            this.TD_secr.Text = "搜尋";
+            this.TD_secr.UseVisualStyleBackColor = true;
+            this.TD_secr.Click += new System.EventHandler(this.Button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 735);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
@@ -622,6 +664,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -680,6 +724,10 @@
         private System.Windows.Forms.Button AutoOpen_button;
         private System.Windows.Forms.Button TD_button;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox TD_textbox;
+        private System.Windows.Forms.RichTextBox TD_richTextBox;
+        private System.Windows.Forms.Button TD_secr;
     }
 }
 
