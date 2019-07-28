@@ -139,18 +139,18 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Location = new System.Drawing.Point(15, 67);
+            this.panel1.Location = new System.Drawing.Point(3, 67);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1214, 642);
+            this.panel1.Size = new System.Drawing.Size(1214, 607);
             this.panel1.TabIndex = 1;
             // 
             // richTextBox2
             // 
             this.richTextBox2.Font = new System.Drawing.Font("新細明體-ExtB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.richTextBox2.Location = new System.Drawing.Point(758, 217);
+            this.richTextBox2.Location = new System.Drawing.Point(771, 219);
             this.richTextBox2.Margin = new System.Windows.Forms.Padding(0);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(404, 420);
+            this.richTextBox2.Size = new System.Drawing.Size(404, 388);
             this.richTextBox2.TabIndex = 106;
             this.richTextBox2.Text = "\n恭喜開通一鍵開通功能，目前只能開通ONT部分，\nOLT TAG 以上 都要手打!!\n\n需要先產出 Profile 確認後，才能啟用!!\n\n# 有任何錯誤 不負責" +
     "!!";
@@ -181,6 +181,7 @@
             this.VIP_button.TabIndex = 103;
             this.VIP_button.Text = "啟用";
             this.VIP_button.UseVisualStyleBackColor = true;
+            this.VIP_button.Click += new System.EventHandler(this.VIP_button_Click);
             // 
             // auto_button
             // 
@@ -193,6 +194,7 @@
             this.auto_button.Text = "一鍵開通";
             this.auto_button.UseVisualStyleBackColor = true;
             this.auto_button.Visible = false;
+            this.auto_button.Click += new System.EventHandler(this.AutoOpen_button_Click);
             // 
             // txt_button
             // 
@@ -203,6 +205,7 @@
             this.txt_button.TabIndex = 101;
             this.txt_button.Text = "將輸出txt檔";
             this.txt_button.UseVisualStyleBackColor = true;
+            this.txt_button.Click += new System.EventHandler(this.txt_button_Click);
             // 
             // label17
             // 
@@ -220,6 +223,7 @@
             this.Down_Box.Name = "Down_Box";
             this.Down_Box.Size = new System.Drawing.Size(121, 22);
             this.Down_Box.TabIndex = 70;
+            this.Down_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Down_Box_KeyPress);
             // 
             // label16
             // 
@@ -238,6 +242,7 @@
             this.Percen_Box.Size = new System.Drawing.Size(121, 22);
             this.Percen_Box.TabIndex = 71;
             this.Percen_Box.Text = "10";
+            this.Percen_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Percen_Box_KeyPress);
             // 
             // label15
             // 
@@ -257,6 +262,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 20);
             this.comboBox1.TabIndex = 60;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -274,6 +280,7 @@
             this.Cvlan_Box.Name = "Cvlan_Box";
             this.Cvlan_Box.Size = new System.Drawing.Size(121, 22);
             this.Cvlan_Box.TabIndex = 73;
+            this.Cvlan_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cvlan_Box_KeyPress);
             // 
             // label13
             // 
@@ -291,6 +298,7 @@
             this.Svlan_Box.Name = "Svlan_Box";
             this.Svlan_Box.Size = new System.Drawing.Size(121, 22);
             this.Svlan_Box.TabIndex = 72;
+            this.Svlan_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Svlan_Box_KeyPress);
             // 
             // label12
             // 
@@ -308,6 +316,7 @@
             this.Mode_Box.Name = "Mode_Box";
             this.Mode_Box.Size = new System.Drawing.Size(121, 22);
             this.Mode_Box.TabIndex = 74;
+            this.Mode_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Mode_Box_KeyPress);
             // 
             // label11
             // 
@@ -349,7 +358,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(151, 219);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(576, 417);
+            this.richTextBox1.Size = new System.Drawing.Size(576, 388);
             this.richTextBox1.TabIndex = 99;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -414,6 +423,7 @@
             this.grow_button.TabIndex = 98;
             this.grow_button.Text = "產出 Profile";
             this.grow_button.UseVisualStyleBackColor = true;
+            this.grow_button.Click += new System.EventHandler(this.grow_button_Click);
             // 
             // label8
             // 
@@ -491,6 +501,7 @@
             this.UP_Box.Name = "UP_Box";
             this.UP_Box.Size = new System.Drawing.Size(121, 22);
             this.UP_Box.TabIndex = 69;
+            this.UP_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UP_Box_KeyPress);
             // 
             // Des_Box
             // 
@@ -512,6 +523,8 @@
             this.OnuID_Box.Name = "OnuID_Box";
             this.OnuID_Box.Size = new System.Drawing.Size(121, 22);
             this.OnuID_Box.TabIndex = 65;
+            this.OnuID_Box.TextChanged += new System.EventHandler(this.OnuID_Box_TextChanged);
+            this.OnuID_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnuID_Box_KeyPress);
             // 
             // Port_Box
             // 
@@ -519,6 +532,8 @@
             this.Port_Box.Name = "Port_Box";
             this.Port_Box.Size = new System.Drawing.Size(121, 22);
             this.Port_Box.TabIndex = 64;
+            this.Port_Box.TextChanged += new System.EventHandler(this.Port_Box_TextChanged);
+            this.Port_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Port_Box_KeyPress);
             // 
             // Slot_Box
             // 
@@ -527,6 +542,8 @@
             this.Slot_Box.Name = "Slot_Box";
             this.Slot_Box.Size = new System.Drawing.Size(121, 22);
             this.Slot_Box.TabIndex = 63;
+            this.Slot_Box.TextChanged += new System.EventHandler(this.Slot_Box_TextChanged);
+            this.Slot_Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Slot_Box_KeyPress);
             // 
             // label1
             // 
@@ -546,6 +563,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 20);
             this.comboBox3.TabIndex = 62;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.ComboBox3_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -568,6 +586,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 20);
             this.comboBox2.TabIndex = 61;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -607,7 +626,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label19.Location = new System.Drawing.Point(696, 715);
+            this.label19.Location = new System.Drawing.Point(700, 674);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(67, 12);
             this.label19.TabIndex = 6;
@@ -616,11 +635,11 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.TD_textbox);
-            this.panel2.Controls.Add(this.TD_richTextBox);
             this.panel2.Controls.Add(this.TD_secr);
+            this.panel2.Controls.Add(this.TD_richTextBox);
             this.panel2.Location = new System.Drawing.Point(12, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(735, 642);
+            this.panel2.Size = new System.Drawing.Size(735, 604);
             this.panel2.TabIndex = 7;
             // 
             // TD_textbox
@@ -632,10 +651,10 @@
             // 
             // TD_richTextBox
             // 
-            this.TD_richTextBox.Location = new System.Drawing.Point(3, 53);
+            this.TD_richTextBox.Location = new System.Drawing.Point(3, 44);
             this.TD_richTextBox.Name = "TD_richTextBox";
             this.TD_richTextBox.ReadOnly = true;
-            this.TD_richTextBox.Size = new System.Drawing.Size(729, 567);
+            this.TD_richTextBox.Size = new System.Drawing.Size(729, 560);
             this.TD_richTextBox.TabIndex = 4;
             this.TD_richTextBox.Text = "";
             // 
@@ -653,14 +672,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 735);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(767, 690);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Location = new System.Drawing.Point(100, 100);
             this.Name = "Form1";
-            this.Text = "Taifo_工具集";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
